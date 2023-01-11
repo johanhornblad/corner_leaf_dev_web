@@ -1,3 +1,5 @@
+import { ExperienceComponent } from "./components/experience/experience.component";
+
 export const skills: {
   id: number;
   name: string;
@@ -55,3 +57,5 @@ export const experience: {
   to: "2021-03-08",
   description: "This is a description",
 };
+
+export const experienceList = [experience, experience, experience, experience];

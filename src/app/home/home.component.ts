@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { experience } from "./testdata";
 
 @Component({
   selector: "app-home",
@@ -11,6 +12,7 @@ import { Component, OnInit } from "@angular/core";
       </div>
     </section>
     <app-skill-list></app-skill-list>
+    <app-experience-list></app-experience-list>
   `,
   styles: [],
 })

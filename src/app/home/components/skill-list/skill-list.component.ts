@@ -4,18 +4,13 @@ import { skills } from "../../testdata";
 @Component({
   selector: "app-skill-list",
   template: `
-    <div class="section">
-      <div class="container has-text-centered">
-        <div class="title">Skills</div>
-        <div class="columns" *ngIf="skills">
-          <div style="margin: 0.5%;" *ngFor="let skill of skills">
-            <app-skill [skill]="skill"></app-skill>
-          </div>
-        </div>
+    <div class="skill-list">
+      <div *ngFor="let skill of skills">
+        <app-skill class="skill-grid-item" [skill]="skill"></app-skill>
       </div>
     </div>
   `,
-  styles: [],
+  styleUrls: ["skill-list.component.scss"],
 })
 export class SkillListComponent implements OnInit {
   skills: {
@@ -28,9 +23,4 @@ export class SkillListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  onClick() {
-    this.isExpanding = true;
-    alert("Button was clicked");
-  }
 }
